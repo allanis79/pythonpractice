@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 
+<<<<<<< HEAD
 def insertion_sort(A):
 	for i in range(1,len(A)):
 		curNum = A[i]
@@ -121,3 +122,6 @@ def partition(A, low, hi):
 l =[4,3,9,7,87,65,89,44,54]
 
 print quick_sort(l)
+=======
+def insertion
+>>>>>>> 7dea5ba958a6357fb1085249baa7a390a48c6bc1
