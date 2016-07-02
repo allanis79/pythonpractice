@@ -255,7 +255,7 @@ if __name__ == '__main__':
 	print bst.insert(120)
 	print bst.insert(19)
 	print bst.insert(5)
-	print bst.remove(19)
+	#print bst.remove(19)
 	print bst.remove(56)
 
 	bst.preorder()

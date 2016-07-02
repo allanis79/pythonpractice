@@ -16,8 +16,8 @@ class Node(object):
 	def get_data(self):
 		return self.data
 
-	def set_data(self,d):
-		self.data = d
+	def set_data(self,v):
+		self.data = v
 
 
 
@@ -34,9 +34,11 @@ class LinkedList(object):
 		return self.size
 
 	def Add(self,d):
+
 		new_node = Node(d,self.root)
 		self.root = new_node
 		self.size +=1
+		
 
 	def remove(self,d):
 		this_node = self.root
