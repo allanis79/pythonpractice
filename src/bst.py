@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 
-
+z=[]
 class Node(object):
 
 	def __init__(self,val):
 		self.value = val
 		self.leftChild = None
 		self.rightChild = None
+		
+		
 
 
 	def insert(self,data):
@@ -53,6 +55,7 @@ class Node(object):
 				self.rightChild.preorder()
 
 	def postorder(self):
+		
 
 		if self:
 			if self.leftChild:
@@ -65,14 +68,25 @@ class Node(object):
 
 
 	def inorder(self):
+		global z 
+		
 
 		if self:
 			if self.leftChild:
 				self.leftChild.inorder()
-			print str(self.value)
+			z.append(self.value)
+			
 
 			if self.rightChild:
 				self.rightChild.inorder()
+
+		return z 
+
+
+
+		
+
+		
 
 class Tree(object):
 
@@ -96,6 +110,9 @@ class Tree(object):
 
 		else:
 			return False
+
+
+	
 
 	def remove(self,data):
 
@@ -237,12 +254,23 @@ class Tree(object):
 			self.root.postorder()
 
 
+
 	def inorder(self):
 
 		if self.root is not None:
 			print 'inorder.......'
 
-			self.root.inorder()
+			l = self.root.inorder()
+			print l
+			res=all(l[i]<l[i+1] for i in xrange(len(l)-1))
+			if res:
+				print 'is bst'
+			else:
+				print 'not bst'
+
+		
+			
+			
 
 
 
@@ -260,5 +288,8 @@ if __name__ == '__main__':
 
 	bst.preorder()
 	bst.postorder()
+
 	bst.inorder()
+	
+
 
