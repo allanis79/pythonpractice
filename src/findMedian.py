@@ -46,9 +46,9 @@ if __name__ == '__main__':
 	s.insert(3)
 	s.insert(4)
 	s.insert(5)
+	s.insert(8)
 	s.insert(6)
 	s.insert(7)
-	s.insert(8)
 	s.insert(9)
 	print s.getMedian()
 
