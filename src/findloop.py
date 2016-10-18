@@ -44,6 +44,6 @@ llist.push(15)
 llist.push(10)
  
 # Create a loop for testing
-llist.root.next.next.next = llist.root
+#llist.root.next.next.next = llist.root
 llist.detectloop()
 		
